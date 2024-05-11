@@ -22,10 +22,8 @@ function sendMess(sender_psid, response) {
         (err, res, body) => {
             if (!err) {
                 console.log('message sent!');
-                return resolve(body);
             } else {
                 console.error('Unable to send message:' + err);
-                return reject(err);
             }
         }
     );
