@@ -7,8 +7,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/', (req, res, next) => res.send('<h1>Hello f*king bot</h1>'));
 app.use('/api', route);
+app.use('/', (req, res, next) => res.send('<h1>Hello f*king bot</h1>'));
 
 let port = process.env.PORT || 5100;
 
